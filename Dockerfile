@@ -16,4 +16,4 @@ COPY --from=builder simpleproxy/simpleproxy bin/simpleproxy
 
 EXPOSE $PORT
 
-ENTRYPOINT ["simpleproxy", "-L", "8080", "-R", "$IP"]
+ENTRYPOINT ["simpleproxy", "-L", "$PORT", "-R", "$IP"]
